@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie App</title>
+    <style>
+      body {
+        background: linear-gradient(
+          rgba(233, 172, 172, 0.788),
+          hsl(0 0% 0% /0.1) 20%,
+          rgba(108, 97, 133, 0.445)
+        );
+      }
+      body::-webkit-scrollbar {
+        width: 0.5em;
+      }
+      body::-webkit-scrollbar-thumb {
+        background-color: grey;
+      }
+      h1 {
+        text-align: center;
+        text-decoration: underline;
+      }
+      h2 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 20px;
+        margin-top: -10px;
+      }
+      #movieForm {
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        width: 70%;
+      }
+      input {
+        height: 30px;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 10px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      }
+      #submit {
+        color: white;
+        background-color: teal;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+      }
+
+      .small_div {
+        display: flex;
+        /* height: 400px; */
+        width: 60%;
+      }
+      .small_div > img {
+        width: 40%;
+        height: 100%;
+      }
+      .details {
+        margin-left: 20px;
+        /* align-items: center; */
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+      }
+      #recommended {
+        text-align: center;
+        font-size: 25px;
+        margin: 0%;
+        text-decoration: underline;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Find Your Favourite Movie</h1>
+    <form id="movieForm" onsubmit="movieSearch(event)">
+      <input type="text" placeholder="Enter movie name" id="movie" />
+      <input type="submit" id="submit" />
+    </form>
+    <h3 id="recommended"></h3>
+    <div class="container"></div>
+  </body>
+</html>
+
+<script src="index.js"></script>
